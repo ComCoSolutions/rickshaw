@@ -1,2 +1,0 @@
-# rickshaw
-Auto parts project
