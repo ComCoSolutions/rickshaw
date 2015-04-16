@@ -1,2 +1,2 @@
 # rickshaw
-Mock Auto parts store web application
+A mock web application where customers can buy auto parts.
