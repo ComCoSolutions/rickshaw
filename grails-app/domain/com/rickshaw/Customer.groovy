@@ -7,7 +7,7 @@ package com.rickshaw
 class Customer {
     String firstName
     String lastName
-    String email // We will use this as the log in
+    String email // We will also use this as the log in id
     String password
 
     static hasMany = [orders:  Order]
