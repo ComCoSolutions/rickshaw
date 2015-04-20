@@ -8,6 +8,8 @@ class Product {
     String number
     Float price
 
+    static hasMany = [orderItem: OrderItem]
+
     static constraints = {
         name blank: false
         number blank: false

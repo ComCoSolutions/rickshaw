@@ -9,7 +9,9 @@ class Order {
     Float total
 
     static belongsTo = [customer: Customer]
+
     static hasMany = [orderItems: OrderItem]
+    
     static constraints = {
         total nullable: false
     }

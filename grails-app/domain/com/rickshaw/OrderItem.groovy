@@ -12,7 +12,7 @@ class OrderItem {
 
     static constraints = {
         quantity min: 1
-        total nullable: false
+        total nullable: false, total min 0
     }
 
 }
