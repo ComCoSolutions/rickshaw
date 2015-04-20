@@ -11,6 +11,7 @@ class OrderItem {
     static belongsTo = [order: Order, product: Product]
 
     static constraints = {
+        quantity min: 1
         total nullable: false
     }
 
