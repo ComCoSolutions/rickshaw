@@ -13,6 +13,6 @@ class Product {
     static constraints = {
         name blank: false
         number blank: false
-        price: min 0
+        price min: 0F
     }
 }

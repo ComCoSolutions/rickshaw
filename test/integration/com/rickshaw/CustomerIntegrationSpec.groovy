@@ -1,7 +1,4 @@
 package com.rickshaw
-
-
-
 import spock.lang.*
 
 /**
