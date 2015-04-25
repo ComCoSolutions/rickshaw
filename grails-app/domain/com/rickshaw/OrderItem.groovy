@@ -8,7 +8,7 @@ class OrderItem {
     Integer quantity
     Float total
 
-    static belongsTo = [order: Order, product: Product]
+    static belongsTo = [order: CustomerOrder, product: Product]
 
     static constraints = {
         quantity min: 1

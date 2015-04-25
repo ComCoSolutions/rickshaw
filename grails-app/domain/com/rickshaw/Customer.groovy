@@ -10,7 +10,7 @@ class Customer {
     String email // We will also use this as the log in id
     String password
 
-    static hasMany = [orders:  Order]
+    static hasMany = [orders:  CustomerOrder]
 
     static constraints = {
         firstName blank: false

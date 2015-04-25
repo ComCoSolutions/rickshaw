@@ -45,6 +45,20 @@ class CustomerIntegrationSpec extends Specification {
         "email.invalid" == john.errors.getFieldError("email").code
         "notAnEmailAddress" == john.errors.getFieldError("email").rejectedValue
     }
+
+    def "When a customer is saved, their order is also saved"() {
+        given: "A brand new customer and a new order"
+        def moe = new Customer(firstName: 'Moe', lastName: 'B',
+                            email: 'moeb@somewhere.com', password: 'secret')
+        def moesOrder = new CustomerOrder(dateCreated: new Date(), total: 0F)
+        when: "the order is added to customer and customer is saved"
+        moe.addToOrders(moesOrder)
+        moe.save(failOnError: true)
+        then: "order and customer exist in db and order is owned by customer"
+        Customer.count() == 1
+        CustomerOrder.count() == 1
+        moe.orders.contains(CustomerOrder.get(moesOrder.id))
+    }
 }
 
 

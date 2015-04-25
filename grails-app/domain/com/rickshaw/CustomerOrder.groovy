@@ -4,7 +4,7 @@
 */
 package com.rickshaw
 
-class Order {
+class CustomerOrder {
     Date dateCreated
     Float total
 
