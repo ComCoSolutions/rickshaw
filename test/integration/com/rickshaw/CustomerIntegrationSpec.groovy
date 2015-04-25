@@ -50,14 +50,14 @@ class CustomerIntegrationSpec extends Specification {
         given: "A brand new customer and a new order"
         def moe = new Customer(firstName: 'Moe', lastName: 'B',
                             email: 'moeb@somewhere.com', password: 'secret')
-        def moesOrder = new CustomerOrder(dateCreated: new Date(), total: 0F)
+        def moesOrder = new Order(dateCreated: new Date(), total: 0F)
         when: "the order is added to customer and customer is saved"
         moe.addToOrders(moesOrder)
         moe.save(failOnError: true)
         then: "order and customer exist in db and order is owned by customer"
         Customer.count() == 1
-        CustomerOrder.count() == 1
-        moe.orders.contains(CustomerOrder.get(moesOrder.id))
+        Order.count() == 1
+        moe.orders.contains(Order.get(moesOrder.id))
     }
 }
 

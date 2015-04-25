@@ -4,13 +4,17 @@
 */
 package com.rickshaw
 
-class CustomerOrder {
+class Order {
     Date dateCreated
     Float total
 
     static belongsTo = [customer: Customer]
 
     static hasMany = [orderItems: OrderItem]
+
+    static mapping = {
+        table "`Order`"
+    }
     
     static constraints = {
         total nullable: false
