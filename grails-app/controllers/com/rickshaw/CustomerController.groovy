@@ -2,5 +2,9 @@ package com.rickshaw
 
 class CustomerController {
 
-    def index() { }
+    static scaffold = true
+
+    def index() {
+
+    }
 }
