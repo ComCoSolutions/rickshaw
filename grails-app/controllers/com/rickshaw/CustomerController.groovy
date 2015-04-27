@@ -2,9 +2,7 @@ package com.rickshaw
 
 class CustomerController {
 
-    static scaffold = true
+    static scaffold = Customer
 
-    def index() {
 
-    }
 }
