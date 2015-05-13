@@ -47,7 +47,9 @@
 						<td><g:formatBoolean boolean="\${${propertyName}.${p.name}}" /></td>
 					<%          } else if (p.type == Date || p.type == java.sql.Date || p.type == java.sql.Time || p.type == Calendar) { %>
 						<td><g:formatDate date="\${${propertyName}.${p.name}}" /></td>
-					<%          } else { %>
+					<%          } else if (p.manyToOne || p.oneToOne || p.oneToMany || p.manyToMany) { %>
+                        <td>\${${propertyName}?.${p.name}?.displayString?.encodeAsHTML()}</td>
+                    <%         }   else { %>
 						<td>\${fieldValue(bean: ${propertyName}, field: "${p.name}")}</td>
 					<%  }   }   } %>
 					</tr>
