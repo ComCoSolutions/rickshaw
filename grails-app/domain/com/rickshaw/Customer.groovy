@@ -20,4 +20,6 @@ class Customer {
             return passwd != user.email
         } /* password cannot be the same as email (log in id) */
     }
+
+    String toString() { return firstName + " " + lastName }
 }
