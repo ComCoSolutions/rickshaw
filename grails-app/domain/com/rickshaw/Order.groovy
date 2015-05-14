@@ -19,4 +19,6 @@ class Order {
     static constraints = {
         total nullable: false
     }
+
+    String getDisplayString() { return "Order: " + this.id }
 }
