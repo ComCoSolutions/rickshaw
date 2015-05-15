@@ -53,6 +53,9 @@ grails.project.dependency.resolution = {
     }
 
     plugins {
+        // Grails console plugin added (Moe 05/14/15)
+        compile ":console:1.5.4"
+
         // plugins for the build system only
         build ":tomcat:7.0.52.1"
 
