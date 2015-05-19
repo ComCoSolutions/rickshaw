@@ -33,10 +33,10 @@
                             <label for="password">Password:</label>
                             <g:passwordField name="password" id="password" class="form-control" />
                         </div>
-                        <g:submitButton name="login" value="Login" class="btn btn-primary" />
+                        <g:submitButton name="login" value="Login" class="btn btn-primary" id="submit"/>
                     </fieldset>
                 </g:form>
-                <div id="error" class="alert alert-danger">Error</div>
+                <div id="error" class="alert"></div>
             </div>
         </div>
     </div>
@@ -44,6 +44,7 @@
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.1/jquery.validate.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
     <g:javascript src="script.js" />
 </body>
