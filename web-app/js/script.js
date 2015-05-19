@@ -1,31 +1,26 @@
 $(function () {
     $("#submit").click(function () {
-        var $loginID = $("#loginID");
+        var $loginID = $("#loginID").val();
         var $password = $("#password").val().length;
+        var $error = $("#error");
+        var errorMessage = "";
 
-        if (validateLoginID() && validatePassword()) {
-            $("#error").show().html("Thank you").removeClass("alert-danger").addClass("alert-success");
-            return true;
-        } else {
+        if ($loginID == "") {
+            errorMessage += "<p>Login ID cannot be blank</p>";
+            console.log(errorMessage);
+        }
+
+        if ($password < 6 || $password > 8) {
+            errorMessage += "<p>Please check the password length</p>";
+            console.log(errorMessage);
+        }
+
+        if (errorMessage == "") {
+            $error.show().html("<p>Thank you!</p>").removeClass("alert-danger").addClass("alert-success animated bounceInUp");
             return false;
-        }
-
-        function validateLoginID() {
-            if ($loginID == "") {
-                $("#error").show().append("Login ID cannot be blank<br>").addClass("alert-danger animated bounceInDown");
-                return false;
-            } else {
-                return true;
-            }
-        }
-
-        function validatePassword() {
-            if ($password < 6 || $password > 8) {
-                $("#error").show().append("Please check password length<br>").addClass("alert-danger animated bounceInDown");
-                return false;
-            } else {
-                return true;
-            }
+        } else {
+            $error.show().html(errorMessage).addClass("alert-danger animated bounceInUp");
+            return false;
         }
 
     });

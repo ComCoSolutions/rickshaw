@@ -27,7 +27,7 @@
                         <legend>Login Page</legend>
                         <div class="form-group">
                             <label for="loginID">Login ID:</label>
-                            <g:textField name="loginID" id="loginID" class="form-control" />
+                            <g:textField name="loginID" id="loginID" class="form-control" placeholder="someone@somewhere.com"/>
                         </div>
                         <div class="form-group">
                             <label for="password">Password:</label>
