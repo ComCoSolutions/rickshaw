@@ -5,9 +5,9 @@ class LoginController {
     def login() {
         def customer = Customer.findByEmailAndPassword(params.loginID, params.password)
         if (customer) {
-            println "Customer found"
+            render "Customer found"
         } else {
-            println "Sorry, no such customer"
+            render "Sorry, no such customer"
         }
     }
 }
