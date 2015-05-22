@@ -37,9 +37,12 @@
                     </fieldset>
                 </g:form>
                 <div id="error" class="alert"></div>
+<<<<<<< HEAD:grails-app/views/login/index.gsp
                 <g:if test="${flash.message}">
                     <div class="message alert alert-danger" role="status">${flash.message}</div>
                 </g:if>
+=======
+>>>>>>> origin/loginPage:grails-app/views/login/login.gsp
             </div>
         </div>
     </div>
@@ -49,6 +52,10 @@
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.1/jquery.validate.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+<<<<<<< HEAD:grails-app/views/login/index.gsp
 <!--     <g:javascript src="script.js" /> -->
+=======
+    <g:javascript src="script.js" />
+>>>>>>> origin/loginPage:grails-app/views/login/login.gsp
 </body>
 </html>
